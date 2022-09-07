@@ -77,7 +77,7 @@ FROM DUAL;
 
 -- DB 리터럴 : 임의로 지정한 값을 기존 테이블에 존재하는 값 처럼 사용하는 것
 --> (필수) D의 리터럴 표기법은 '' 홑따옴표
---> " " 쌍따옴표는 특수문자, 대소문자, 기호 등을 구분하여 나타낼 때 사용하는 ㅠㅛ기법
+--> " " 쌍따옴표는 특수문자, 대소문자, 기호 등을 구분하여 나타낼 때 사용하는 표기법
 -->     쌍따옴표 안에 작성되는 것들이 하나 임을 의미
 
 SELECT EMP_NAME, SALARY, '원 입니다' 
@@ -95,9 +95,9 @@ SELECT DISTINCT DEPT_CODE, JOB_CODE  FROM EMPLOYEE;
 
 -------------------------------------------------------
 
--- SELECT 절 : SELECT 컬러명
+-- SELECT 절 : SELECT 컬럼명
 -- FROM 절 : FROM 테이블 명
--- WHERE 절 : WHERE 컬렘명 인산나자 값;[]
+-- WHERE 절 : WHERE 컬럼명 연산자 값;[]
 -- (조건절)
 
 -- EMPLOYEE 테이블에서 급여가 3백만원 초가인 사람의 
@@ -240,7 +240,7 @@ AND SALARY >= 2700000;
 -- 연산자 우선순위
 /*
 1. 산술연산자 ( + - * / )
-2. 연결연산자 ( \\ )
+2. 연결연산자 ( || )
 3. 비교연산자 ( > < >= <= = != <>)
 4. IS NULL / IS NOT NULL, LIKE, IN / NOT IN
 5. BETWEEN AND / NOT BETWEEN AND
