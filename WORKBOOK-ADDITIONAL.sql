@@ -76,8 +76,12 @@ WHERE  COACH_PROFESSOR_NO IS NULL;
 SELECT SUBSTR(TERM_NO,1,4) 년도, ROUND(AVG(POINT),1) "년도 별 평점"
 FROM TB_GRADE
 WHERE STUDENT_NO = 'A112113'
+<<<<<<< Updated upstream
 GROUP BY SUBSTR(TERM_NO,1,4)
 ORDER BY 1;
+=======
+GROUP BY SUBSTR(TERM_NO,1,4);
+>>>>>>> Stashed changes
 
 
 --ADD 13.
@@ -99,6 +103,7 @@ ORDER BY 1;
 
 
 --ADD 15.
+<<<<<<< Updated upstream
 SELECT NVL(SUBSTR(TERM_NO,1,4), ' ') 년도, 
 		NVL(SUBSTR(TERM_NO, 5,2), ' ') 학기, 
 		ROUND(AVG(POINT),1) 평점
@@ -109,3 +114,10 @@ ORDER BY SUBSTR(TERM_NO,1,4), SUBSTR(TERM_NO, 5,2);
 --> ORDER BY절에 함수 작성 가능!
 
 
+=======
+SELECT SUBSTR(TERM_N0,1,4) 년도, SUBSTR(TERM_NO, 5,6) 학기, POINT 평점
+FROM TB_GRADE
+WHERE STUDENT_N0 = 'A112113'
+GROUP BY TERM_N0
+ORDER BY TERM_N0;
+>>>>>>> Stashed changes
