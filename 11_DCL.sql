@@ -117,7 +117,7 @@ SELECT * FROM sde.EMPLOYEE;
 GRANT SELECT ON EMPLOYEE TO sde;
 
 -- 3. (sample) 다시 kh_sde.EMPLOYEE 조회
-SELECT * FROM kh_sde.EMPLOYEE;
+SELECT * FROM KH_SDE.EMPLOYEE;
 
 -- KH계정(운영용 DB)
 -- SAMPLE계정(테스트 DB)
@@ -127,6 +127,13 @@ SELECT * FROM kh_sde.EMPLOYEE;
 -- 4. (sample) kh_sde_EMPLOYEE 테이블을 복사한 테이블 생성
 CREATE TABLE EMP_SAMPLE
 AS SELECT * FROM KH_SDE.EMPLOYEE;
+
+-- 5. (KH) sample 계정에 부여한 EMPLOYEE  테이브ㅜㄹ 조회 권한 회수(REVOKE)
+
+-- [권한 회수 작성법]
+-- REVOKE 객체권한 ON 객체명 FROM 사용자명;
+REVOKE SELECT ON EMPLOYEE FROM sde_sample;
+
 
 
 
